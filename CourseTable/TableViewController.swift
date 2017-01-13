@@ -19,6 +19,11 @@ class TableViewController: ViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+
+    @IBAction func refresh(_ sender: Any) {
+        self.do_print()
+    }
 
     
     func do_print(){
@@ -28,7 +33,9 @@ class TableViewController: ViewController {
         for Course in dataModel.courseList{
             let label = UILabel(frame:CGRect(x:(Int(Course.day)!-1)*75+40, y:(Int(Course.starttime)!-1)*55+120, width:70, height:(Int(Course.finishtime)!-Int(Course.starttime)!+1)*55))
             label.text = Course.coursename + " " + Course.courselocation
-            label.backgroundColor = UIColor.gray
+            label.backgroundColor = UIColor.cyan
+            label.font = UIFont(name:"Copperplate", size:15)
+            label.lineBreakMode = NSLineBreakMode.byTruncatingTail
             self.view.addSubview(label);
             print("\n"+Course.coursename)
         }

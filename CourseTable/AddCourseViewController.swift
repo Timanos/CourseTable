@@ -18,19 +18,14 @@ class AddCourseViewController: ViewController {
     @IBOutlet weak var confirm: UIButton!
     
     var dataModel = DataModel()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        onCreateData()
-
         // Do any additional setup after loading the view.
     }
-    
-    func onCreateData(){
-        dataModel.courseList.append(Courses(coursename: "语文", day:"1", starttime:"1", finishtime:"2", courselocation: "101"))
-    }
-    
+
     @IBAction func do_add(_ sender: UIButton) {
         
         if  coursename != nil &&  day != nil &&  starttime != nil &&  finishtime != nil &&  courselocation != nil{
