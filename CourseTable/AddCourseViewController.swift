@@ -33,10 +33,14 @@ class AddCourseViewController: ViewController {
     
     @IBAction func do_add(_ sender: UIButton) {
         
-        if coursename != nil && day != nil && starttime != nil && finishtime != nil && courselocation != nil{
-        dataModel.courseList.append(Courses(coursename:coursename.text!,day:day.text!,starttime:starttime.text!,finishtime:finishtime.text!,courselocation:courselocation.text!))
+        if  coursename != nil &&  day != nil &&  starttime != nil &&  finishtime != nil &&  courselocation != nil{
+            
+        dataModel.courseList.append(Courses(coursename: coursename.text!,day: day.text!,starttime: starttime.text!,finishtime: finishtime.text!,courselocation: courselocation.text!))
         
             dataModel.saveData()
+            
+            _ = self.navigationController?.popViewController(animated: true)
+            
         }
     }
     

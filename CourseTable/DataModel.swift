@@ -16,6 +16,8 @@ class DataModel: NSObject {
         super.init()
         print("沙盒文件夹路径：\(documentsDirectory())")
         print("数据文件路径：\(dataFilePath())")
+        
+        loadData()
     }
     
     //保存数据
@@ -24,7 +26,7 @@ class DataModel: NSObject {
         //申明一个归档处理对象
         let archiver = NSKeyedArchiver(forWritingWith: data)
         //将lists以对应Checklist关键字进行编码
-        archiver.encode(courseList, forKey: "courseList")
+        archiver.encode(courseList, forKey: "CourseName")
         //编码结束
         archiver.finishEncoding()
         //数据写入
@@ -45,7 +47,7 @@ class DataModel: NSObject {
             //解码器
             let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
             //通过归档时设置的关键字Checklist还原lists
-            courseList = unarchiver.decodeObject(forKey: "courseList") as! Array
+            courseList = unarchiver.decodeObject(forKey: "CourseName") as! Array
             //结束解码
             unarchiver.finishDecoding()
         }

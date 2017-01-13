@@ -10,12 +10,30 @@ import UIKit
 
 class TableViewController: ViewController {
 
+    var dataModel = DataModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.do_print()
+        
         // Do any additional setup after loading the view.
     }
 
+    
+    func do_print(){
+        
+        dataModel.loadData()
+        
+        for Course in dataModel.courseList{
+            let label = UILabel(frame:CGRect(x:(Int(Course.day)!-1)*75+40, y:(Int(Course.starttime)!-1)*55+120, width:70, height:(Int(Course.finishtime)!-Int(Course.starttime)!+1)*55))
+            label.text = Course.coursename + " " + Course.courselocation
+            label.backgroundColor = UIColor.gray
+            self.view.addSubview(label);
+            print("\n"+Course.coursename)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

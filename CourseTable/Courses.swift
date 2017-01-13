@@ -9,13 +9,13 @@
 import UIKit
 import Foundation
 
-class Courses: NSObject {
+class Courses: NSObject,NSCoding {
     
-    var coursename:String
-    var courselocation:String
-    var day:String
-    var starttime:String
-    var finishtime:String
+    var coursename:String!
+    var courselocation:String!
+    var day:String!
+    var starttime:String!
+    var finishtime:String!
     
     //构造方法
     required init(coursename:String="", day:String="", starttime:String="", finishtime:String="", courselocation:String="") {

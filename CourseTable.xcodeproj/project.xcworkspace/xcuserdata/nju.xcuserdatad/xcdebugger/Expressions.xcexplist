@@ -3,13 +3,37 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "TableViewController.do_print() -&gt; ():TableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataModel.courseList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DataModel.saveData() -&gt; ():DataModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "courseList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AddCourseViewController.do_add(UIButton) -&gt; ():AddCourseViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "dataModel.courseList">
             </PersistentString>
             <PersistentString
-               value = "coursename">
+               value = "coursename.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewDidLoad() -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataModel.courseList">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
